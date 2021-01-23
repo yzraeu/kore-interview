@@ -31,11 +31,9 @@ namespace KI.Repository
 		LEFT JOIN Production.ProductModel AS pm ON pm.ProductModelID = pr.ProductModelID
 		LEFT JOIN Production.ProductSubcategory AS psc ON psc.ProductSubcategoryID = pr.ProductSubcategoryID
 WHERE 
-	pm.Name LIKE @searchQuery
+	soh.PurchaseOrderNumber LIKE @searchQuery
 	OR pr.ProductNumber LIKE @searchQuery
-	OR pm.Name LIKE @searchQuery
-	OR psc.Name LIKE @searchQuery
-	OR soh.PurchaseOrderNumber LIKE @searchQuery
+	OR pr.Name LIKE @searchQuery
 	OR soh.AccountNumber LIKE @searchQuery
 	OR pe.FirstName LIKE @searchQuery
 	OR pe.LastName LIKE @searchQuery
@@ -44,11 +42,9 @@ WHERE
 
 			var query = @$"
 SELECT 
-	pr.Name AS ProductName,
-	pr.ProductNumber,
-	pm.Name AS ProductModelName,
-	psc.Name AS ProductSubCategoryName,
 	soh.PurchaseOrderNumber,
+	pr.ProductNumber,
+	pr.Name AS ProductName,
 	soh.AccountNumber,
 	pe.FirstName + ' ' + pe.LastName AS SalesPersonName,
 	sod.CarrierTrackingNumber,

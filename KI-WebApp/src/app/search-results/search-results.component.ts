@@ -14,7 +14,7 @@ export class SearchResultsComponent implements OnInit {
   offset: number = 0;
   next: number = 10;
   orderDetailData: any;
-  rowCount:number = 0;
+  rowCount: number = 0;
 
   searchQuery: string = "";
 
@@ -31,11 +31,11 @@ export class SearchResultsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public previousPage(){
+  public previousPage() {
     this.search(this.searchQuery, (this.offset - this.next));
   }
 
-  public nextPage(){
+  public nextPage() {
     this.search(this.searchQuery, (this.offset + this.next));
   }
 
@@ -47,12 +47,17 @@ export class SearchResultsComponent implements OnInit {
     this.error = false;
 
     this.orderDetailsService.getAll(searchQuery, offset, this.next)
-      .subscribe((data: any) => { // Couldn't make the error handler work here
+      .pipe(
+        catchError(async (error) => this.errorHandler(error))
+      )
+      .subscribe((data: any) => {
         console.log(data);
-        this.rowCount = data.rowCount;
-        this.currentPage = (offset / this.next) + 1;
-        this.pageCount = Math.ceil(this.rowCount / this.next);
-        this.orderDetailData = data.items;
+        if (data != undefined) {
+          this.rowCount = data.rowCount;
+          this.currentPage = (offset / this.next) + 1;
+          this.pageCount = Math.ceil(this.rowCount / this.next);
+          this.orderDetailData = data.items;
+        }
         this.searching = false;
         this.searchFinishedEvent.emit();
       });
