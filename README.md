@@ -13,31 +13,37 @@ Create WebApp
 Download DB
 Update SQL Version (had only SQL 14, needed 15)
 
-5:20PM started 
+### 5:20 PM started 
 Create Solution
  - Create API (Log/OpenAPI/Error Handling/Redis?)
  - Create AppService (Mapster)
  - Create Domain
  - Create Repository (Dapper)
 
-7:30 PM - first commit, API working with DB
+### 7:30 PM - first commit, API working with DB
 
 Starting work with UI (Agnular)
  - Create UI (Angular)
 
 Create hello world, add material components, add textbox and button
 
-8:30 PM - Dinner breack
+### 8:30 PM 
+- Dinner breack
 
-9 pm - back
+### 9 pm 
+- Back to work
 
-10:20 pm - get request from server returning data
+### 10:20 pm 
+- get request from server returning data
 
-12 am - almost everything working on Angular side - missing error handling on client side, but gave up, still need to fix pagination
+### 12 am 
+- almost everything working on Angular side - missing error handling on client side, but gave up, still need to fix pagination
 
-1 am - pagination done
+### 1 am 
+- pagination done
 
-1:20 am - fix minor bugs on server side + minor refactor in pagination on client
+### 1:20 am 
+- fix minor bugs on server side + minor refactor in pagination on client
 
 1:35 am - fix error handling on client!
 
