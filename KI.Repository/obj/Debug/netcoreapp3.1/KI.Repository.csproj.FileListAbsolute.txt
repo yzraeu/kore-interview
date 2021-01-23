@@ -1,9 +1,0 @@
-D:\Projects\KoreInterview\KI.Repository\bin\Debug\netcoreapp3.1\KI.Repository.deps.json
-D:\Projects\KoreInterview\KI.Repository\bin\Debug\netcoreapp3.1\KI.Repository.dll
-D:\Projects\KoreInterview\KI.Repository\bin\Debug\netcoreapp3.1\KI.Repository.pdb
-D:\Projects\KoreInterview\KI.Repository\obj\Debug\netcoreapp3.1\KI.Repository.csprojAssemblyReference.cache
-D:\Projects\KoreInterview\KI.Repository\obj\Debug\netcoreapp3.1\KI.Repository.AssemblyInfoInputs.cache
-D:\Projects\KoreInterview\KI.Repository\obj\Debug\netcoreapp3.1\KI.Repository.AssemblyInfo.cs
-D:\Projects\KoreInterview\KI.Repository\obj\Debug\netcoreapp3.1\KI.Repository.csproj.CoreCompileInputs.cache
-D:\Projects\KoreInterview\KI.Repository\obj\Debug\netcoreapp3.1\KI.Repository.dll
-D:\Projects\KoreInterview\KI.Repository\obj\Debug\netcoreapp3.1\KI.Repository.pdb
