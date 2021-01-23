@@ -45,9 +45,11 @@ Create hello world, add material components, add textbox and button
 ### 1:20 am 
 - fix minor bugs on server side + minor refactor in pagination on client
 
-1:35 am - fix error handling on client!
+### 1:35 am 
+- fix error handling on client!
 
-1:42 am - found minor bugs / last commit
+### 1:42 am 
+- found minor bugs / last commit
 
 ## Considerations
 
