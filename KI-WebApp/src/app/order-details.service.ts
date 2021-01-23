@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { OrderDetails } from './entities/OrderDetails';
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,12 +21,13 @@ export class OrderDetailsService {
     return this.data;
   }
 
-  public getAll(searchQuery: string, offset: number, next: number): Observable<OrderDetails[]> {
-    console.log('looking for: ' + searchQuery);
+  public getAll(searchQuery: string, offset: number, next: number): Observable<any[]> {
+    console.log(`looking for ${searchQuery}, offset: ${offset}`);
     const params = new HttpParams().set("searchQuery", searchQuery)
       .set("offset", offset.toString())
       .set("next", next.toString());
 
-    return this.httpClient.get<OrderDetails[]>(this.SERVICE_URL, { params });
+    return this.httpClient.get<any[]>(this.SERVICE_URL, { params });
   }
+
 }

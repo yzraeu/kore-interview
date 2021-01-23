@@ -10,7 +10,7 @@ namespace KI.AppService
 {
 	public interface IOrderDetailsAppService
 	{
-		Task<IEnumerable<OrderDetailsViewModel>> GetAllPaginated(string searchQuery, int offset, int next);
+		Task<PaginatedResult<OrderDetailsViewModel>> GetAllPaginated(string searchQuery, int offset, int next);
 	}
 
 	public class OrderDetailsAppService : IOrderDetailsAppService
@@ -21,11 +21,11 @@ namespace KI.AppService
 			_repository = repository;
 		}
 
-		public async Task<IEnumerable<OrderDetailsViewModel>> GetAllPaginated(string searchQuery, int offset, int next)
+		public async Task<PaginatedResult<OrderDetailsViewModel>> GetAllPaginated(string searchQuery, int offset, int next)
 		{
 			var data = await _repository.GetAllPaginated(searchQuery, offset, next);
 
-			var mapped = data.Adapt<IEnumerable<OrderDetailsViewModel>>();
+			var mapped = data.Adapt<PaginatedResult<OrderDetailsViewModel>>();
 
 			return mapped;
 		}

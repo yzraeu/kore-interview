@@ -1,6 +1,8 @@
 <div class="container" role="main">
   <h1>Kore Interview - Israel Rodriguez</h1>
-  <app-search-bar></app-search-bar>
+  <app-search-bar (searchEvent)="searchEvent($event)"></app-search-bar>
+  <hr>
+  <app-search-results (searchFinishedEvent)="searchFinishedEvent()"></app-search-results>
 </div>
 
 <router-outlet></router-outlet>

@@ -1,1 +1,57 @@
-<p>search-results works!</p>
+<div class="alert alert-info" role="alert" *ngIf="searching">
+    getting data from server...
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="orderDetailData != null && rowCount == 0">
+    Sorry, nothing found!
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="error">
+    <strong>Sorry, something went wrong!</strong>
+    {{ errorMessage }}
+</div>
+
+
+<table class="table" *ngIf="orderDetailData != null && rowCount > 0">
+    <thead>
+        <tr>
+            <th scope="col">Purchase #</th>
+            <th scope="col">Prod #</th>
+            <th scope="col">Prod Name</th>
+            <th scope="col">Acct #</th>
+            <th scope="col">Sales Person</th>
+            <th scope="col">Tracking #</th>
+            <th scope="col">Order Qty</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+            <th scope="col">ModifiedDate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of orderDetailData">
+            <th scope="row">{{ item.purchaseOrderNumber }}</th>
+            <td>{{ item.productNumber }}</td>
+            <td>{{ item.productName }}</td>
+            <td>{{ item.accountNumber }}</td>
+            <td>{{ item.salesPersonName }}</td>
+            <td>{{ item.carrierTrackingNumber }}</td>
+            <td align="right">{{ item.orderQty }}</td>
+            <td align="right">{{ item.unitPrice | currency }}</td>
+            <td align="right">{{ item.lineTotal | currency }}</td>
+            <td>{{ item.modifiedDate | date }}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5">
+                {{ rowCount | number }} records found 
+                (showing {{ currentPage }} of 
+                {{ pageCount }} pages)
+            </td>
+            <td colspan="5" align="right">
+                <a href="#" (click)="previousPage()" *ngIf="offset > 0">< prev page</a> |
+                <a href="#" (click)="nextPage()" *ngIf="offset + next < rowCount">next page ></a>
+            </td>
+        </tr>
+    </tfoot>
+</table>
