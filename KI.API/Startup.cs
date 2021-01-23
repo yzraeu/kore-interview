@@ -29,6 +29,7 @@ namespace KI.API
 			services.AddTransient<IOrderDetailsRepository, OrderDetailsRepository>();
 
 			services.AddControllers();
+			services.AddCors();
 			services.AddSwaggerGen(c =>
 			{
 				c.SwaggerDoc("v1", new OpenApiInfo { Title = "KI.API", Version = "v1" });
@@ -50,6 +51,8 @@ namespace KI.API
 			app.UseRouting();
 
 			app.UseAuthorization();
+
+			app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 			app.UseEndpoints(endpoints =>
 			{

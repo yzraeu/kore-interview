@@ -44,8 +44,16 @@ FROM
 	INNER JOIN Production.Product AS pr ON pr.ProductID = sod.ProductID
 		LEFT JOIN Production.ProductModel AS pm ON pm.ProductModelID = pr.ProductModelID
 		LEFT JOIN Production.ProductSubcategory AS psc ON psc.ProductSubcategoryID = pr.ProductSubcategoryID
---WHERE 
-	--pm.Name LIKE @searchQuery
+WHERE 
+	pm.Name LIKE @searchQuery
+	OR pr.ProductNumber LIKE @searchQuery
+	OR pm.Name LIKE @searchQuery
+	OR psc.Name LIKE @searchQuery
+	OR soh.PurchaseOrderNumber LIKE @searchQuery
+	OR soh.AccountNumber LIKE @searchQuery
+	OR pe.FirstName LIKE @searchQuery
+	OR pe.LastName LIKE @searchQuery
+	OR sod.CarrierTrackingNumber LIKE @searchQuery
 ORDER BY pr.Name
 OFFSET @offset ROWS 
 FETCH NEXT @next ROWS ONLY
@@ -57,7 +65,7 @@ FETCH NEXT @next ROWS ONLY
 				{
 					await connection.OpenAsync();
 
-					return await connection.QueryAsync<OrderDetails>(query, new { searchQuery, offset, next });
+					return await connection.QueryAsync<OrderDetails>(query, new { searchQuery = $"%{searchQuery}%", offset, next });
 				}
 			}
 			finally

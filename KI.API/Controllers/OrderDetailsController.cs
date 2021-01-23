@@ -23,7 +23,7 @@ namespace KI.API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IEnumerable<OrderDetailsViewModel>> Get(string searchQuery, int offset, int next)
+		public async Task<IEnumerable<OrderDetailsViewModel>> Get([FromQuery]string searchQuery, [FromQuery] int offset, [FromQuery] int next)
 		{
 			//if (string.IsNullOrEmpty(searchQuery) || offset < 0 || next < 0 || offset >= next)
 			//	return BadRequest("request parameters are invalid");
