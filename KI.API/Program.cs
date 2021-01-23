@@ -11,8 +11,8 @@ namespace KI.API
 		{
 			Log.Logger = new LoggerConfiguration()
 				.MinimumLevel.Debug()
-				.MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-				.MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
+				.MinimumLevel.Override("Microsoft", LogEventLevel.Verbose)
+				.MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Information)
 				.Enrich.FromLogContext()
 				.WriteTo.Console()
 				.CreateLogger();

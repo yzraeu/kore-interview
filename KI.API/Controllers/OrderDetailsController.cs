@@ -27,7 +27,7 @@ namespace KI.API.Controllers
 		[ProducesResponseType((int)HttpStatusCode.BadRequest)]
 		public async Task<IActionResult> Get([FromQuery]string searchQuery, [FromQuery] int offset, [FromQuery] int next)
 		{
-			if (string.IsNullOrEmpty(searchQuery) || offset < 0 || next < 0)
+			if (string.IsNullOrEmpty(searchQuery) || offset < 0 || next <= 0)
 				return BadRequest("request parameters are invalid"); // less info on purpose - avoid security issues
 
 			try
