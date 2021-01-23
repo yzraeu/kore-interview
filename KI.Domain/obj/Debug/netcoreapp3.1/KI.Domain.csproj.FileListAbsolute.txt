@@ -1,0 +1,9 @@
+D:\Projects\KoreInterview\KI.Domain\bin\Debug\netcoreapp3.1\KI.Domain.deps.json
+D:\Projects\KoreInterview\KI.Domain\bin\Debug\netcoreapp3.1\KI.Domain.dll
+D:\Projects\KoreInterview\KI.Domain\bin\Debug\netcoreapp3.1\KI.Domain.pdb
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\netcoreapp3.1\KI.Domain.csprojAssemblyReference.cache
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\netcoreapp3.1\KI.Domain.AssemblyInfoInputs.cache
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\netcoreapp3.1\KI.Domain.AssemblyInfo.cs
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\netcoreapp3.1\KI.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\netcoreapp3.1\KI.Domain.dll
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\netcoreapp3.1\KI.Domain.pdb

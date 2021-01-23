@@ -1,0 +1,8 @@
+D:\Projects\KoreInterview\KI.AppService\bin\Debug\netcoreapp3.1\KI.AppService.deps.json
+D:\Projects\KoreInterview\KI.AppService\bin\Debug\netcoreapp3.1\KI.AppService.dll
+D:\Projects\KoreInterview\KI.AppService\bin\Debug\netcoreapp3.1\KI.AppService.pdb
+D:\Projects\KoreInterview\KI.AppService\obj\Debug\netcoreapp3.1\KI.AppService.AssemblyInfoInputs.cache
+D:\Projects\KoreInterview\KI.AppService\obj\Debug\netcoreapp3.1\KI.AppService.AssemblyInfo.cs
+D:\Projects\KoreInterview\KI.AppService\obj\Debug\netcoreapp3.1\KI.AppService.csproj.CoreCompileInputs.cache
+D:\Projects\KoreInterview\KI.AppService\obj\Debug\netcoreapp3.1\KI.AppService.dll
+D:\Projects\KoreInterview\KI.AppService\obj\Debug\netcoreapp3.1\KI.AppService.pdb

@@ -1,0 +1,11 @@
+D:\Projects\KoreInterview\KI.Domain\bin\Debug\net5.0\KI.Domain.deps.json
+D:\Projects\KoreInterview\KI.Domain\bin\Debug\net5.0\KI.Domain.dll
+D:\Projects\KoreInterview\KI.Domain\bin\Debug\net5.0\ref\KI.Domain.dll
+D:\Projects\KoreInterview\KI.Domain\bin\Debug\net5.0\KI.Domain.pdb
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\net5.0\KI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\net5.0\KI.Domain.AssemblyInfoInputs.cache
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\net5.0\KI.Domain.AssemblyInfo.cs
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\net5.0\KI.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\net5.0\KI.Domain.dll
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\net5.0\ref\KI.Domain.dll
+D:\Projects\KoreInterview\KI.Domain\obj\Debug\net5.0\KI.Domain.pdb
