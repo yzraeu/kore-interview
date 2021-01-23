@@ -39,6 +39,7 @@ WHERE
 	OR soh.AccountNumber LIKE @searchQuery
 	OR pe.FirstName LIKE @searchQuery
 	OR pe.LastName LIKE @searchQuery
+	OR pe.FirstName + ' ' + pe.LastName LIKE @searchQuery
 	OR sod.CarrierTrackingNumber LIKE @searchQuery";
 
 			var query = @$"

@@ -4,6 +4,7 @@ using KI.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace KI.API.Controllers
@@ -22,18 +23,20 @@ namespace KI.API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<PaginatedResult<OrderDetailsViewModel>> Get([FromQuery]string searchQuery, [FromQuery] int offset, [FromQuery] int next)
+		[ProducesResponseType(typeof(PaginatedResult<OrderDetailsViewModel>), (int)HttpStatusCode.OK)]
+		[ProducesResponseType((int)HttpStatusCode.BadRequest)]
+		public async Task<IActionResult> Get([FromQuery]string searchQuery, [FromQuery] int offset, [FromQuery] int next)
 		{
-			//if (string.IsNullOrEmpty(searchQuery) || offset < 0 || next < 0 || offset >= next)
-			//	return BadRequest("request parameters are invalid");
+			if (string.IsNullOrEmpty(searchQuery) || offset < 0 || next < 0)
+				return BadRequest("request parameters are invalid"); // less info on purpose - avoid security issues
+
 			try
 			{
-				return await _orderDetailsAppService.GetAllPaginated(searchQuery, offset, next);
+				return Ok(await _orderDetailsAppService.GetAllPaginated(searchQuery, offset, next));
 			}
 			catch (System.Exception)
 			{
-				return null;
-				//return StatusCode(StatusCodes.Status500InternalServerError);
+				return StatusCode(StatusCodes.Status500InternalServerError);
 			}
 		}
 	}
