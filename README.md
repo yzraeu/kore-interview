@@ -28,7 +28,7 @@ Starting work with UI (Agnular)
 Create hello world, add material components, add textbox and button
 
 ### 8:30 PM 
-- Dinner breack
+- Dinner break
 
 ### 9 pm 
 - Back to work
